@@ -17,9 +17,10 @@ use InvalidArgumentException;
  * Use HTML when you want to generate HTML using objects.
  */
 class HTML
-extends Document_Abstract
+extends Node_Abstract
 implements HTMLInterface
 {
+    use ParentNodeTrait; 
 
     const DECLARATIONS = 'doctype,comment';
     const VOID_ELEMENTS = 'meta,link,base,input,br,keygen,param,source,track';
