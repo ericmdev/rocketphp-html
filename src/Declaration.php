@@ -36,7 +36,7 @@ extends Node_Abstract
                 $this->_output = "<!DOCTYPE $data>\n"; 
                 break;
             case 'comment':
-                $data = isset($data) ? $data : '';
+                $data = isset($data) ? $data : "";
                 $this->_output = "<!-- $data -->\n"; 
                 break;
             default:

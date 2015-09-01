@@ -91,7 +91,7 @@ implements ElementInterface
     {   
         switch ($name) {
             case 'attr':
-                if(!is_string($value) || $value === '')
+                if(!is_string($value) || $value === "")
                     throw new InvalidArgumentException(
                         "Expected null|string for element attr property.", 
                         1

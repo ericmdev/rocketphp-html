@@ -30,7 +30,7 @@ trait ParentNodeTrait
     { 
         if(!empty($args))
             foreach ($args as $key => $value) {
-                if(!is_string($value) || $value === '')
+                if(!is_string($value) || $value === "")
                     throw new InvalidArgumentException(
                         "Expected string for node args (e.g. id=\"foo\")", 
                         1
