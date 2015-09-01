@@ -3,6 +3,9 @@
 [![Build Status](https://travis-ci.org/rocketphp/html.svg?branch=master)](https://travis-ci.org/rocketphp/html)
 [![Dependency Status](https://www.versioneye.com/user/projects/55e5eb448c0f620019000540/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55e5eb448c0f620019000540)
 
+[![Latest Stable Version](https://poser.pugx.org/rocketphp/html/v/stable)](https://packagist.org/packages/rocketphp/html)
+[![License](https://poser.pugx.org/rocketphp/html/license)](https://packagist.org/packages/rocketphp/html)
+
 `RocketPHP\HTML` is a component for object oriented HTML generation.
 
 **_To construct HTML_** – start with an instance of HTML and add tags by accessing the tag’s method on that object.
