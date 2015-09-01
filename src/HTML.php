@@ -18,6 +18,7 @@ use InvalidArgumentException;
  */
 class HTML
 extends Document_Abstract
+implements HTMLInterface
 {
 
     const DECLARATIONS = 'doctype,comment';
