@@ -52,7 +52,7 @@ extends Node_Abstract
     /**
      * Return text output
      *
-     * @return string HTML
+     * @return string
      */ 
     public function output() 
     {
