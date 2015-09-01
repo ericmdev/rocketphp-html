@@ -18,7 +18,8 @@ class Declaration
 extends Node_Abstract
 {
     /** 
-     * @var string Output
+     * @access protected
+     * @var    string Output
      */
     protected $_output;
 
