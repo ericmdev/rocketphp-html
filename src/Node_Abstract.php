@@ -37,7 +37,7 @@ implements NodeInterface
      */
     public function output() 
     {
-        $output = '';
+        $output = "";
         foreach ($this->_nodeList->nodes as $node) {
             $output .= $node->output();
         }

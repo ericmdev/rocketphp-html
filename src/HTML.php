@@ -33,12 +33,12 @@ extends Document_Abstract
      */
     public function __construct($name = null, $args = null)
     { 
-        if(!is_null($name) && !is_string($name) || $name === '')
+        if(!is_null($name) && !is_string($name) || $name === "")
             throw new InvalidArgumentException(
                 "Expected string for node name (e.g. `p`)", 
                 1
             );
-        if(!is_null($args) && !is_string($args) || $args === '')
+        if(!is_null($args) && !is_string($args) || $args === "")
             throw new InvalidArgumentException(
                 "Expected string for node args (e.g. `id=\"foo\"`)", 
                 1
