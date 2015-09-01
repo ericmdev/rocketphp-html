@@ -1,0 +1,47 @@
+{
+    "name": "rocketphp/html",
+    "description": "Object oriented HTML generation.",
+    "type": "library",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Eric Mugerwa",
+            "email":  "eric@rocketphp.io",
+            "homepage":  "http://www.rocketphp.io",
+            "role": "Developer"
+        }
+    ],
+    "license": "MIT",
+    "keywords": [
+        "rocketphp",
+        "html"
+    ],
+    "homepage": "https://github.com/rocketphp/html",
+    "autoload": {
+        "psr-4": {
+            "RocketPHP\\HTML\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RocketPHPTest\\HTML\\": "test/"
+        }
+    },
+    "require": {
+        "php": ">=5.5"
+    },
+    "require-dev": {
+        "phpunit/PHPUnit": "~4.0",
+        "phpdocumentor/phpdocumentor": "2.*"
+    },
+    "suggest": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev",
+            "dev-develop": "1.1-dev"
+        }
+    }
+}
