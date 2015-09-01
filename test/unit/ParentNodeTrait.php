@@ -1,4 +1,13 @@
-<?php namespace RocketPHPTest\HTML;
+<?php
+/**
+ * RocketPHP (http://rocketphp.io)
+ *
+ * @package   RocketPHP
+ * @link      https://github.com/rocketphp/html
+ * @license   http://opensource.org/licenses/MIT MIT
+ */
+
+namespace RocketPHPTest\HTML;
 
 /**
  * @group RocketPHP_HTML
@@ -50,7 +59,7 @@ extends HTMLTestCase
      * @expectedException        InvalidArgumentException
      * @expectedExceptionMessage Expected string for node args
      */
-    public function testCallInvalidArgs($badValue)
+    public function testCallThrowsExceptionIfInvalidArgs($badValue)
     {  
         $result = $this->mock->p($badValue);
     }

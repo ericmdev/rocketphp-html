@@ -1,6 +1,16 @@
-<?php 
+<?php
+/**
+ * RocketPHP (http://rocketphp.io)
+ *
+ * @package   RocketPHP
+ * @link      https://github.com/rocketphp/html
+ * @license   http://opensource.org/licenses/MIT MIT
+ */
+
 namespace RocketPHPTest\HTML;
+
 use RocketPHP\HTML\Element;
+
 /**
  * @group RocketPHP_HTML
  */ 
@@ -8,13 +18,13 @@ class Element_UnitTest
 extends HTMLTestCase
 {
 
-    public function testConstructorCreatesHTMLElement()
+    public function testConstructorCreatesHtmlElement()
     {
         $p = new Element('p'); 
         $this->assertInstanceOf('RocketPHP\HTML\Element', $p);
     }
 
-    public function testOutputIsValidHTML()
+    public function testOutputIsValidHtml()
     {
         $p = new Element('p'); 
         $output = $p->output();
@@ -72,7 +82,7 @@ extends HTMLTestCase
      * @expectedException        BadMethodCallException
      * @expectedExceptionMessage Failed to set unknown element property
      */
-    public function testSetPropertyUnknownProperty()
+    public function testSetPropertyThrowsExceptionIfUnknownProperty()
     {
         $p = new Element('p'); 
         $p->something = 'id="red"';
@@ -83,7 +93,7 @@ extends HTMLTestCase
      * @expectedException        InvalidArgumentException
      * @expectedExceptionMessage Expected null|string for element attr property
      */
-    public function testSetPropertyInvalidAttributes($badValue)
+    public function testSetPropertyThrowsExceptionIfInvalidAttributes($badValue)
     {
         $p = new Element('p'); 
         $p->attr = $badValue;

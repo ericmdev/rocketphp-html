@@ -18,7 +18,8 @@ class Declaration
 extends Node_Abstract
 {
     /** 
-     * @var string Output
+     * @access protected
+     * @var    string Output
      */
     protected $_output;
 
@@ -51,7 +52,7 @@ extends Node_Abstract
     /**
      * Return text output
      *
-     * @return string HTML
+     * @return string
      */ 
     public function output() 
     {
