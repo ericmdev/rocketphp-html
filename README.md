@@ -1,5 +1,7 @@
 # html
 
+[![Build Status](https://travis-ci.org/rocketphp/html.svg?branch=master)](https://travis-ci.org/rocketphp/html)
+
 `RocketPHP\HTML` is a component for object oriented HTML generation.
 
 **_To construct HTML_** – start with an instance of HTML and add tags by accessing the tag’s method on that object.
