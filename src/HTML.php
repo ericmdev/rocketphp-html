@@ -1,0 +1,49 @@
+<?php
+/**
+ * RocketPHP (http://rocketphp.io)
+ *
+ * @package   RocketPHP
+ * @link      https://github.com/rocketphp/html
+ * @license   http://opensource.org/licenses/MIT MIT
+ */
+
+namespace RocketPHP\HTML;
+
+use InvalidArgumentException;
+
+/**
+ * HTML: Object oriented HTML generation
+ *
+ * Use HTML when you want to generate HTML using objects.
+ */
+class HTML
+extends Document_Abstract
+{
+
+    const DECLARATIONS = 'doctype,comment';
+    const VOID_ELEMENTS = 'meta,link,base,input,br,keygen,param,source,track';
+
+    /**
+     * Constructor
+     *
+     * @param string $name Node name
+     * @param array  $args Node arguments
+     * @throws InvalidArgumentException If $name is not a string
+     * @throws InvalidArgumentException If $args is not a string
+     */
+    public function __construct($name = null, $args = null)
+    { 
+        if(!is_null($name) && !is_string($name) || $name === '')
+            throw new InvalidArgumentException(
+                "Expected string for node name (e.g. `p`)", 
+                1
+            );
+        if(!is_null($args) && !is_string($args) || $args === '')
+            throw new InvalidArgumentException(
+                "Expected string for node args (e.g. `id=\"foo\"`)", 
+                1
+            );
+        parent::__construct();
+    }
+
+}

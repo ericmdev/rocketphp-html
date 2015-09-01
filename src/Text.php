@@ -1,0 +1,57 @@
+<?php
+/**
+ * RocketPHP (http://rocketphp.io)
+ *
+ * @package   RocketPHP
+ * @link      https://github.com/rocketphp/html
+ * @license   http://opensource.org/licenses/MIT MIT
+ */
+
+namespace RocketPHP\HTML;
+
+/**
+ * Text
+ *
+ * Creates a text node.
+ */
+class Text
+extends Node_Abstract
+{
+    /** 
+     * @access protected 
+     * @var    string
+     */
+    protected $_output;
+
+    /**
+     * Constructor
+     *
+     * @param string $data   Text data
+     * @param bool   $escape Escape text option
+     */
+    public function __construct($text, $escape = false)
+    { 
+        // Escape HTML special characters for safety
+        if ($escape) {
+            $text = htmlentities(
+                $text, 
+                ENT_QUOTES | ENT_HTML5, 
+                "UTF-8", 
+                false
+            ); 
+            $this->_output = $text;
+        }
+        $this->_output = $text;
+    } 
+
+    /**
+     * Return text output
+     *
+     * @return string HTML
+     */ 
+    public function output() 
+    {
+        return $this->_output;
+    }
+
+}
