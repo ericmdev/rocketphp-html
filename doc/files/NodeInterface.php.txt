@@ -1,0 +1,17 @@
+<?php
+/**
+ * RocketPHP (http://rocketphp.io)
+ *
+ * @link      https://github.com/rocketphp/html
+ * @license   http://opensource.org/licenses/MIT MIT
+ */
+
+namespace RocketPHP\HTML;
+
+/** 
+ * Interface for nodes 
+ */
+interface NodeInterface
+{  
+    public function output();
+}

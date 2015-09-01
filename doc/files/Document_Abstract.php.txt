@@ -1,0 +1,10 @@
+<?php namespace RocketPHP\HTML;
+/** 
+ * Document
+ *
+ */
+abstract class Document_Abstract 
+extends Node_Abstract
+{
+    use ParentNodeTrait; 
+}

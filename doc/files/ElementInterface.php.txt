@@ -1,0 +1,21 @@
+<?php
+/**
+ * RocketPHP (http://rocketphp.io)
+ *
+ * @link      https://github.com/rocketphp/html
+ * @license   http://opensource.org/licenses/MIT MIT
+ */
+
+namespace RocketPHP\HTML;
+
+/** 
+ * Interface for elements
+ */
+interface ElementInterface
+extends NodeInterface
+{
+    /**
+     * @return bool
+     */    
+    public function hasChildren();
+}
