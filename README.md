@@ -1,6 +1,7 @@
 # html
 
 [![Build Status](https://travis-ci.org/rocketphp/html.svg?branch=master)](https://travis-ci.org/rocketphp/html)
+[![Dependency Status](https://www.versioneye.com/user/projects/55e5eb448c0f620019000540/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55e5eb448c0f620019000540)
 
 `RocketPHP\HTML` is a component for object oriented HTML generation.
 
