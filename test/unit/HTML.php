@@ -1,6 +1,16 @@
-<?php 
+<?php
+/**
+ * RocketPHP (http://rocketphp.io)
+ *
+ * @package   RocketPHP
+ * @link      https://github.com/rocketphp/html
+ * @license   http://opensource.org/licenses/MIT MIT
+ */
+
 namespace RocketPHPTest\HTML;
+
 use RocketPHP\HTML\HTML;
+
 /**
  * @group RocketPHP_HTML
  */ 
@@ -46,7 +56,7 @@ extends HTMLTestCase
      * @expectedException        InvalidArgumentException
      * @expectedExceptionMessage Expected string for node name
      */
-    public function testConstructorInvalidName($badValue)
+    public function testConstructorThrowsExceptionIfInvalidName($badValue)
     {  
         $h = new HTML($badValue);
     }
@@ -56,7 +66,7 @@ extends HTMLTestCase
      * @expectedException        InvalidArgumentException
      * @expectedExceptionMessage Expected string for node args
      */
-    public function testConstructorInvalidArgs($badValue)
+    public function testConstructorThrowsExceptionIfInvalidArgs($badValue)
     {  
         $h = new HTML('p', $badValue);
     }
