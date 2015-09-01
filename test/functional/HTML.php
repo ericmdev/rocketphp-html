@@ -17,6 +17,27 @@ use RocketPHP\HTML\HTML;
 class HTML_Functional
 extends \PHPUnit_Framework_TestCase
 {
+    public function testGenerateHead()
+    {
+
+        $h = new HTML();
+        $h->doctype('html');
+        $html = $h->html('lang="en"');
+        $head = $html->head();
+        $base = $head->base('href="http://www.example.com/"');  
+        $meta = $head->meta('charset="utf-8"');
+        $head->script('src="/js/app.js"');
+
+        $result = "<!DOCTYPE html>\n";
+        $result .= '<html lang="en">';
+        $result .= '<head>';
+        $result .= '<base href="http://www.example.com/">';
+        $result .= '<meta charset="utf-8">';
+        $result .= '<script src="/js/app.js"></script>';
+        $result .= '</head>';
+        $result .= '</html>';
+        $this->assertSame($result, $h->__toString());
+    }
 
     public function testGenerateArticle()
     {
@@ -72,28 +93,5 @@ extends \PHPUnit_Framework_TestCase
         $result .= '</ol>';
         $this->assertSame($result, $h->__toString());
 
-    }
-
-
-    public function testGenerateHead()
-    {
-
-        $h = new HTML();
-        $h->doctype('html');
-        $html = $h->html('lang="en"');
-        $head = $html->head();
-        $base = $head->base('href="http://www.example.com/"');  
-        $meta = $head->meta('charset="utf-8"');
-        $head->script('src="/js/app.js"');
-
-        $result = "<!DOCTYPE html>\n";
-        $result .= '<html lang="en">';
-        $result .= '<head>';
-        $result .= '<base href="http://www.example.com/">';
-        $result .= '<meta charset="utf-8">';
-        $result .= '<script src="/js/app.js"></script>';
-        $result .= '</head>';
-        $result .= '</html>';
-        $this->assertSame($result, $h->__toString());
     }
 }

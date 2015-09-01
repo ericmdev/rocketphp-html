@@ -31,13 +31,13 @@ extends HTMLTestCase
         $this->assertInstanceOf('RocketPHP\\HTML\\HTML', $h);
     }
 
-    public function testHTMLIsInitiallyEmptyString()
+    public function testHtmlIsInitiallyEmptyString()
     {
         $h = new HTML(); 
         $this->assertSame('', $h->__toString()); 
     }
 
-    public function testHTMLOutputIsInitiallyEmptyString()
+    public function testHtmlOutputIsInitiallyEmptyString()
     {
         $h = new HTML(); 
         $this->assertSame('', $h->output());

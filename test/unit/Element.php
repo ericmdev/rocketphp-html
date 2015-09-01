@@ -18,13 +18,13 @@ class Element_UnitTest
 extends HTMLTestCase
 {
 
-    public function testConstructorCreatesHTMLElement()
+    public function testConstructorCreatesHtmlElement()
     {
         $p = new Element('p'); 
         $this->assertInstanceOf('RocketPHP\HTML\Element', $p);
     }
 
-    public function testOutputIsValidHTML()
+    public function testOutputIsValidHtml()
     {
         $p = new Element('p'); 
         $output = $p->output();
