@@ -1,6 +1,7 @@
 # html
 
 [![Build Status](https://travis-ci.org/rocketphp/html.svg?branch=master)](https://travis-ci.org/rocketphp/html)
+[![Coverage Status](https://coveralls.io/repos/rocketphp/html/badge.svg?branch=master&service=github)](https://coveralls.io/github/rocketphp/html?branch=master)
 [![Dependency Status](https://www.versioneye.com/user/projects/55e5eb448c0f620019000540/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55e5eb448c0f620019000540)
 
 [![Latest Stable Version](https://poser.pugx.org/rocketphp/html/v/stable)](https://packagist.org/packages/rocketphp/html)
