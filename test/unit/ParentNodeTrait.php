@@ -18,7 +18,7 @@ extends HTMLTestCase
 
     public function setUp()
     {
-        $this->mock = new MockParentNode();
+        $this->mock = new ParentNodeMock();
     }
 
     public function tearDown()
