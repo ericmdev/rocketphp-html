@@ -2,6 +2,7 @@
 /**
  * RocketPHP (http://rocketphp.io)
  *
+ * @package   RocketPHP
  * @link      https://github.com/rocketphp/html
  * @license   http://opensource.org/licenses/MIT MIT
  */
@@ -25,8 +26,8 @@ extends Node_Abstract
     /**
      * Constructor
      *
-     * @param string $data   Text data.
-     * @param bool   $escape Escape text.
+     * @param string $data   Text data
+     * @param bool   $escape Escape text option
      */
     public function __construct($text, $escape = false)
     { 

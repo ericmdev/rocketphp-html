@@ -2,6 +2,7 @@
 /**
  * RocketPHP (http://rocketphp.io)
  *
+ * @package   RocketPHP
  * @link      https://github.com/rocketphp/html
  * @license   http://opensource.org/licenses/MIT MIT
  */
@@ -16,8 +17,10 @@ use InvalidArgumentException;
  * Use HTML when you want to generate HTML using objects.
  */
 class HTML
-extends Document_Abstract
+extends Node_Abstract
+implements HTMLInterface
 {
+    use ParentNodeTrait; 
 
     const DECLARATIONS = 'doctype,comment';
     const VOID_ELEMENTS = 'meta,link,base,input,br,keygen,param,source,track';
@@ -32,12 +35,12 @@ extends Document_Abstract
      */
     public function __construct($name = null, $args = null)
     { 
-        if(!is_null($name) && !is_string($name) || $name === '')
+        if(!is_null($name) && !is_string($name) || $name === "")
             throw new InvalidArgumentException(
                 "Expected string for node name (e.g. `p`)", 
                 1
             );
-        if(!is_null($args) && !is_string($args) || $args === '')
+        if(!is_null($args) && !is_string($args) || $args === "")
             throw new InvalidArgumentException(
                 "Expected string for node args (e.g. `id=\"foo\"`)", 
                 1

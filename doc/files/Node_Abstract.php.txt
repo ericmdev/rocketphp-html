@@ -2,6 +2,7 @@
 /**
  * RocketPHP (http://rocketphp.io)
  *
+ * @package   RocketPHP
  * @link      https://github.com/rocketphp/html
  * @license   http://opensource.org/licenses/MIT MIT
  */
@@ -36,7 +37,7 @@ implements NodeInterface
      */
     public function output() 
     {
-        $output = '';
+        $output = "";
         foreach ($this->_nodeList->nodes as $node) {
             $output .= $node->output();
         }

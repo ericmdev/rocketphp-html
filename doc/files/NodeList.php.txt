@@ -2,6 +2,7 @@
 /**
  * RocketPHP (http://rocketphp.io)
  *
+ * @package   RocketPHP
  * @link      https://github.com/rocketphp/html
  * @license   http://opensource.org/licenses/MIT MIT
  */
@@ -11,7 +12,7 @@ namespace RocketPHP\HTML;
 /** 
  * NodeList
  *
- * Stores nodes in array.
+ * Stores node objects in array.
  */ 
 class NodeList
 implements NodeListInterface

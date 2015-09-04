@@ -2,6 +2,7 @@
 /**
  * RocketPHP (http://rocketphp.io)
  *
+ * @package   RocketPHP
  * @link      https://github.com/rocketphp/html
  * @license   http://opensource.org/licenses/MIT MIT
  */
@@ -11,18 +12,19 @@ namespace RocketPHP\HTML;
 /**
  * Declaration 
  *
- * Creates a HTML declaration.
+ * Creates a declaration node.
  */
 class Declaration
 extends Node_Abstract
 {
     /** 
-     * @var string Output
+     * @access protected
+     * @var    string Output
      */
     protected $_output;
 
     /**
-     * Constructor.
+     * Constructor
      *
      * @param string      $name  Name
      * @param null|string $value Data
@@ -35,7 +37,7 @@ extends Node_Abstract
                 $this->_output = "<!DOCTYPE $data>\n"; 
                 break;
             case 'comment':
-                $data = isset($data) ? $data : '';
+                $data = isset($data) ? $data : "";
                 $this->_output = "<!-- $data -->\n"; 
                 break;
             default:
@@ -50,7 +52,7 @@ extends Node_Abstract
     /**
      * Return text output
      *
-     * @return string HTML.
+     * @return string
      */ 
     public function output() 
     {

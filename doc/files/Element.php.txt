@@ -2,6 +2,7 @@
 /**
  * RocketPHP (http://rocketphp.io)
  *
+ * @package   RocketPHP
  * @link      https://github.com/rocketphp/html
  * @license   http://opensource.org/licenses/MIT MIT
  */
@@ -14,7 +15,7 @@ use BadMethodCallException;
 /**
  * Element
  *
- * Creates a HTML element.
+ * Creates an element node.
  */
 class Element
 extends Node_Abstract
@@ -58,23 +59,21 @@ implements ElementInterface
 
         $this->_tagname = $tagname; 
 
-        if (strpos(HTML::VOID_ELEMENTS.',', "$tagname,") !== false) {
+        if (strpos(HTML::VOID_ELEMENTS.',', "$tagname,") !== false)
             $this->_kind = self::VOID;  
-        } else {
-            $this->_kind = self::NORMAL; 
-        }
+        else
+            $this->_kind = self::NORMAL;
 
         if ($args) {
             $count = count($args);
-            if ($count == 2) {
+            if ($count === 2) {
                 $this->text($args[0]);
                 $this->_attr = $args[1];
-            } elseif($count == 1) {
-                if (preg_match("/(.*)=\"(.*)\"/", $args[0]) == 1) {
+            } elseif($count === 1) {
+                if (preg_match("/(.*)=\"(.*)\"/", $args[0]) === 1)
                     $this->_attr = $args[0];
-                } else {
+                else
                     $this->text($args[0]);
-                }
             }
         }
 
@@ -92,7 +91,7 @@ implements ElementInterface
     {   
         switch ($name) {
             case 'attr':
-                if(!is_string($value) || $value === '')
+                if(!is_string($value) || $value === "")
                     throw new InvalidArgumentException(
                         "Expected null|string for element attr property.", 
                         1
@@ -118,25 +117,20 @@ implements ElementInterface
      */
     public function __get($name) 
     {   
-        switch ($name) {
-            case 'attr':
-                return $this->_attr;
-                break;
-            default:
-                throw new BadMethodCallException(
-                    "Failed to get unknown element property.", 
-                    1
-                );
-                break;
-        }
+        if($name === 'attr')
+            return $this->_attr;
+        else
+            throw new BadMethodCallException(
+                "Failed to get unknown element property.", 
+                1
+            );
     }
 
     /**
      * Sets child text node
      *
      * @param  string $text   Text
-     * @param  bool   $escape Escape text?
-     *
+     * @param  bool   $escape Escape text option
      * @return Element
      */
     public function text($text, $escape = false) 
@@ -159,7 +153,7 @@ implements ElementInterface
         }
         $output .= '>';
 
-        if ($this->_kind == self::NORMAL) {
+        if ($this->_kind === self::NORMAL) {
             if ($this->hasChildren()) {
                 $output .= parent::output();
             }
