@@ -7,7 +7,7 @@
 [![Latest Stable Version](https://poser.pugx.org/rocketphp/html/v/stable)](https://packagist.org/packages/rocketphp/html)
 [![License](https://poser.pugx.org/rocketphp/html/license)](https://packagist.org/packages/rocketphp/html)
 
-[This is a forkable respository](https://img.shields.io/badge/forkable-yes-brightgreen.svg)](https://basicallydan.github.io/forkability/?u=rocketphp&r=html)
+[![This is a forkable respository](https://img.shields.io/badge/forkable-yes-brightgreen.svg)](https://basicallydan.github.io/forkability/?u=rocketphp&r=html)
 
 `RocketPHP\HTML` is a component for object oriented HTML generation.
 
